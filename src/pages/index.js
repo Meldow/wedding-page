@@ -9,56 +9,75 @@ const handPointer = {
   cursor: 'pointer',
 }
 
+const fontAmsterdam = {
+  fontFamily: 'Amsterdam',
+}
+
+const fontHolidayFree = {
+  fontFamily: 'HolidayFree',
+}
+
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" keywords={ [`gatsby`, `application`, `react`] } />
     <Grid centered columns={ 1 }>
-      <Grid.Column>
-        <div className="ui fluid image">
-          <img src='/images/us.png' />
-          <div style={ {
-            position: 'absolute',
-            bottom: '50%',
-            left: '50%',
-            width: '100%',
-            height: 'auto',
-            color: 'white',
-          } }>TEST
-          </div>
-        </div>
-      </Grid.Column>
-      <Grid.Row centered columns={ 2 }>
+
+      <Grid.Row centered>
         <Grid.Column>
           <div className="ui fluid image">
+            <img src='/images/us.png' />
+            <div style={ {
+              position: 'absolute',
+              bottom: '50%',
+              left: '50%',
+              width: '100%',
+              height: 'auto',
+              color: 'white',
+            } }>TEST
+            </div>
+          </div>
+        </Grid.Column>
+      </Grid.Row>
+
+      <Grid.Row centered columns={ 2 }>
+
+        <Grid.Column>
+          <div className="ui fluid image">
+            <span style={ fontAmsterdam }>Save the date</span>
             <img src='/images/save_the_date.png' />
           </div>
         </Grid.Column>
+
         <Grid.Column>
-          <Grid.Row centered columns={ 1 }>
+
+          <Grid.Row centered>
             <Grid.Column>
               <div>
                 <div style={ handPointer }
                      onClick={ () => {
-                       window.open('https://goo.gl/maps/ay3SvnUceoK2')
+                       window.open('https://www.instagram.com/explore/tags/lopescosta/')
                      } }
                 >
-                  <Icon
-                    name='instagram'
-                    size='large'
-                    link
-                  />
-                  <span>Share our journey!</span>
-                  <span>#LopesCosta</span>
-                  <span>Tag your photos!</span>
+                  <div>Share our journey!</div>
+                  <div>
+                    <Icon
+                      name='instagram'
+                      size='large'
+                      link
+                    />
+                    #LopesCosta
+                  </div>
+                  <div>Tag your photos!</div>
                 </div>
               </div>
             </Grid.Column>
           </Grid.Row>
-          <Grid.Row centered columns={ 1 }>
+
+          <Grid.Row centered>
             <Grid.Column>
               <div style={ handPointer }
                    onClick={ () => {
-                     window.open('https://goo.gl/maps/ay3SvnUceoK2')
+                     window.open('https://goo.gl/maps/Liku3ZaTx982')
                    } }
               >
                 <Icon
